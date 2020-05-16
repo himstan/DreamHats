@@ -1,0 +1,12 @@
+name: HatManager
+version: ${project.version}
+main: me.stan.hatmanager.HatManager
+api-version: 1.13
+depend:
+  - PlaceholderAPI
+
+softdepend:
+  - LuckPerms
+
+commands:
+  hats:

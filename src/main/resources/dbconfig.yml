@@ -1,0 +1,5 @@
+hostname: "localhost"
+port:
+databasename: "playerhats"
+username: "admin"
+password:

@@ -1,0 +1,25 @@
+hatgroups:
+  premium:
+    name: "Premium"
+    permission_group_name: "premium"
+    hats:
+      - rainbowtophat
+      - farmerhat
+
+hats:
+  rainbowtophat:
+    id: 1
+    name: "&4Rainbow TopHat"
+    modelData: 3116
+  farmerhat:
+    id: 2
+    name: "&4Farmer Hat"
+    modelData: 3161
+  fryingpan:
+    id: 3
+    name: "&4Frying pan"
+    modelData: 3003
+  mariohat:
+    id: 4
+    name: "&4Mario Hat"
+    modelData: 3170
