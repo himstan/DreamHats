@@ -1,3 +1,7 @@
+hatspawn:
+  enabled: false
+  chance: 10
+
 hatgroups:
   premium:
     name: "Premium"
@@ -11,15 +15,19 @@ hats:
     id: 1
     name: "&4Rainbow TopHat"
     modelData: 3116
+    weight: 2
   farmerhat:
     id: 2
     name: "&4Farmer Hat"
     modelData: 3161
+    weight: 1
   fryingpan:
     id: 3
     name: "&4Frying pan"
     modelData: 3003
+    weight: 1
   mariohat:
     id: 4
     name: "&4Mario Hat"
     modelData: 3170
+    weight: 1

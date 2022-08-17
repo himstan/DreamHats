@@ -1,42 +1,18 @@
-error:
-  hat_already_equipped: "&4You have a helmet already equipped, please remove it before equipping a hat!"
-  hat_you_dont_have: "&4You don't have this hat!"
-  hat_player_doesnt_have: "&6%player_name% &4doesn't have this hat!"
-  hat_already_have: "&6%player_name% &4already has this hat."
-  hat_not_found: "&4There is no hat named &3%hat_name."
-  enter_username: "&4Please enter a player name!"
-  enter_hat_name_or_id: "&4Please enter a hat ID/Name."
 add:
   soundeffect: "ENTITY_PLAYER_LEVELUP"
   globalsound: false
-  hat_add: "&5You gave a hat named: &3%hat_name% &5to &6%player_name%"
-  hat_receive: "&5You received a hat named: %hat_name%"
 remove:
   soundeffect: "ENTITY_CAT_HURT"
   globalsound: false
-  hat_remove: "&5You removed a hat named: &3%hat_name% &5from &6%player_name%&5!"
-  hat_removed: "&5Your hat named: &3%hat_name% &5has been removed!"
-  hat_dequipped_with_remove: "&5You were wearing the hat that's been removed from you, so it's been dequipped from you!"
 equip:
   soundeffect: "ITEM_ARMOR_EQUIP_CHAIN"
   globalsound: true
-  hat_equip: "&5You equipped a hat named: &3%hat_name%"
 dequip:
   soundeffect: "ITEM_ARMOR_EQUIP_CHAIN"
   globalsound: true
-  hat_dequip: "&5You deequipped a hat named: &3%hat_name%"
 
 permissions:
   hat_equip: "hats.equip"
   hat_add: "hats.add"
   hat_remove: "hats.remove"
-
-permission_messages:
-  equip_error: "You need to have Premium to equip hats!"
-
-hatgroup:
-  add_message: "&5You have been given a hat group named: &3%hat_group_name%"
-
-hat:
-  lore_inventory: "&8CLICK ME TO REMOVE"
-  lore_recipegui: "&8CLICK ME TO EQUIP"
+  reload_config: "hats.reloadconfig"

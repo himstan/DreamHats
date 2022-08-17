@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>me.stan</groupId>
-    <artifactId>HatManager</artifactId>
+    <artifactId>DreamHats</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>HatManager</name>
+    <name>DreamHats</name>
 
     <properties>
-        <java.version>1.8</java.version>
+        <java.version>17</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <server.dir1>D:\Bungee Server\1_HUB\plugins</server.dir1>
-        <server.dir2>D:\Bungee Server\2_SURVIVAL\plugins</server.dir2>
-        <file.name>${project.artifactId}-${project.version}.${project.packaging}</file.name>
     </properties>
 
     <build>
@@ -42,47 +39,13 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
+                            <artifactSet>
+                                <excludes>
+                                    <exclude>me.clip:*</exclude>
+                                    <exclude>net.luckperms:*</exclude>
+                                </excludes>
+                            </artifactSet>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <artifactId>maven-resources-plugin</artifactId>
-                <version>3.1.0</version>
-                <executions>
-                    <execution>
-                        <id>copy-resources-1</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${server.dir1}</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>${basedir}\target</directory>
-                                    <includes>${file.name}</includes>
-                                    <filtering>false</filtering>
-                                </resource>
-                            </resources>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>copy-resources-2</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${server.dir2}</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>${basedir}\target</directory>
-                                    <includes>${file.name}</includes>
-                                    <filtering>false</filtering>
-                                </resource>
-                            </resources>
                         </configuration>
                     </execution>
                 </executions>
@@ -113,15 +76,30 @@
 
     <dependencies>
         <dependency>
+            <groupId>hu.stan</groupId>
+            <artifactId>dreamcore</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.12.0</version>
+        </dependency>
+        <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.15.2-R0.1-SNAPSHOT</version>
+            <version>1.19-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>28.0-jre</version>
+            <version>31.1-jre</version>
         </dependency>
         <dependency>
             <groupId>me.clip</groupId>
@@ -132,7 +110,7 @@
         <dependency>
             <groupId>net.luckperms</groupId>
             <artifactId>api</artifactId>
-            <version>5.0</version>
+            <version>5.4</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>

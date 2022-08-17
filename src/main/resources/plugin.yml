@@ -1,12 +1,8 @@
-name: HatManager
+name: DreamHats
 version: ${project.version}
-main: me.stan.hatmanager.HatManager
+main: me.stan.dreamhats.DreamHats
 api-version: 1.13
-depend:
-  - PlaceholderAPI
 
 softdepend:
+  - PlaceholderAPI
   - LuckPerms
-
-commands:
-  hats:
